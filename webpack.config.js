@@ -1,5 +1,6 @@
 const path = require('path');
 var htmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 const config = {
     entry: {
@@ -32,7 +33,10 @@ const config = {
                 filename: 'index-[hash].html',
                 inject: 'body'
             }
-        )
+        ),
+        new webpack.EnvironmentPlugin({
+            NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
+        })
     ]
 }
 module.exports = config;
