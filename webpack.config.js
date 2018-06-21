@@ -1,7 +1,7 @@
 const path = require('path');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
-
+console.log(process.env.NODE_ENV)
 const config = {
     entry: {
         app: './src/app.js'
@@ -15,7 +15,7 @@ const config = {
             { test: /\.css$/, loader: '!css-loader'},
             { test: /\.ts$/, use: 'ts-loader'},
             { test: /\.html$/, use: 'html-loader'},
-            { 
+            {
                 test: /\.js$/, 
                 loader: 'babel-loader',
                 exclude: path.resolve(__dirname, 'node_modules'),

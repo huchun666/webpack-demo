@@ -10,10 +10,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --config webpack.config.js",
+    "webpack": "webpack --mode=production --config webpack.config.js",
     "dev": "node build/dev.serve.js --dev",
     "watch": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open --hot --port 8090",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "nodeDev": "node webpack.config.js --dev"
   },
   "author": "",
   "license": "ISC",

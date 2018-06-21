@@ -1,0 +1,13 @@
+.DS_Store
+.vscode
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+evcard-mas/
+evcard-mas/index.html
+evcard-mas.rar
+/evcard-mas/
